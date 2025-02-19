@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <script src="./script.js" async defer></script>
+    </head>
+    <body>
+
+        <title>Tutorial</title>
+        <!-- <button onclick="loadSnippet(1)">View snippet 1</button> -->
+        <!-- <button onclick="loadSnippet(2)">View snippet 2</button> -->
+        <!-- <button onclick="loadSnippet(3)">View snippet 3</button> -->
+        <h1>Signal Quality Tagging</h1>
+        <form id="myForm">
+            
+            <h2 id="plot_header"> plot number = 1</h2>
+
+            <!-- check vital presence -->
+            <label for="vitals">Is vital present:</label>
+            <select id="vitalsBtn" name="Vitals present">
+                <option value="na">NA</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <!-- data quality check -->
+            <label for="data_quality">Data quality:</label>
+            <select id="dataqualityBtn" name="Data quality">
+                <option value="na">NA</option>
+                <option value="good">Good</option>
+                <option value="medium">Medium</option>
+                <option value="bad">Bad</option>
+            </select>
+
+            <!-- Primary Sheet HR -->
+            <label for="primary_sheet_hr_quality">Primary sheet HR:</label>
+            <select id="priSheetHR_DataQualityBtn" name="Primary Sheet HR">
+                <option value="na">NA</option>
+                <option value="good">Good</option>
+                <option value="medium">Medium</option>
+                <option value="bad">Bad</option>
+            </select>
+
+            <!-- Primary Sheet RR -->
+            <label for="primary_sheet_rr_quality">Primary sheet RR:</label>
+            <select id="priSheetRR_DataQualityBtn" name="Primary Sheet RR">
+                <option value="na">NA</option>
+                <option value="good">Good</option>
+                <option value="medium">Medium</option>
+                <option value="bad">Bad</option>
+            </select>
+
+            <!-- Secondary Sheet HR -->
+            <label for="primary_sheet_hr_quality">Secondary sheet HR:</label>
+            <select id="priSheetHR_DataQualityBtn" name="Secondary Sheet HR">
+                <option value="na">NA</option>
+                <option value="good">Good</option>
+                <option value="medium">Medium</option>
+                <option value="bad">Bad</option>
+            </select>
+
+            <!-- Secondary Sheet RR -->
+             <label for="secondary_sheet_rr_quality">Secondary sheet RR:</label> 
+             <select id="secSheetRR_DataQualityBtn" name="Secondary Sheet RR">
+                <option value="na">NA</option>
+                <option value="good">Good</option>
+                <option value="medium">Medium</option>
+                <option value="bad">Bad</option>
+             </select>
+
+            <button type="button" id="nextBtn" disabled = "false">Next</button>
+            <button type="submit" id="submitBtn" disabled = "true">Submit</button>
+        </form>
+        <iframe id = 'plotly-id' width="1300" height="900" title="Plot1" src="./epoch_data/epoch-1.html" frame_border="0"></iframe>  
+        <div class="target"></div>
+
+    </body>
+</html>
